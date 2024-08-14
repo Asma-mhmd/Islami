@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.islami.R
 import com.example.islami.databinding.ActivitySplashBinding
 import com.example.islami.ui.screens.home.HomeActivity
+import com.example.islami.ui.screens.tasbeeh.TasbeehActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun NavigateToHome(){
 
-        val intent = Intent(this, HomeActivity::class.java )
+        val intent = Intent(this, TasbeehActivity::class.java )
         startActivity(intent)
 
 
