@@ -1,29 +1,35 @@
-package com.example.islami.ui.screens.tasbeeh
+package com.example.islami.ui.screens.home.tabs.sebha
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
-
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.islami.databinding.FragmentSebhaBinding
 
-import com.example.islami.databinding.ActivityTasbeehBinding
 
-class TasbeehActivity : AppCompatActivity() {
-  lateinit var binding : ActivityTasbeehBinding
-  lateinit var sebha: ImageView
-  lateinit var numbers : TextView
-  lateinit var zekr :TextView
+class SebhaFragment : Fragment() {
+lateinit var binding : FragmentSebhaBinding
+    lateinit var sebha: ImageView
+    lateinit var numbers : TextView
+    lateinit var zekr : TextView
     var counter = 0
     var zekrCounter=0
-    var rotation = 1f
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentSebhaBinding.inflate(inflater, container, false)
+        // Inflate the layout for this fragment
+        return binding.root}
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityTasbeehBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         sebha = binding.sebha
         numbers = binding.numbers
         zekr = binding.zekr
@@ -41,7 +47,7 @@ class TasbeehActivity : AppCompatActivity() {
             if(counter<33){
                 counter++
             }else{counter=0
-            zekrCounter++}
+                zekrCounter++}
             if (zekrCounter==0){
                 zekr.text="سبحان الله"
             }else if (zekrCounter==1){
@@ -56,7 +62,7 @@ class TasbeehActivity : AppCompatActivity() {
             }
             SebhaClick()
 
-    }
+        }
     }
 
     private fun rotateImage() {
@@ -64,7 +70,8 @@ class TasbeehActivity : AppCompatActivity() {
         animator.duration = 300
         animator.start()
     }
-     fun SebhaClick(){
+    fun SebhaClick(){
         numbers.text="$counter"
 
-     }}
+    }}
+

@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun NavigateToHome(){
 
-        val intent = Intent(this, TasbeehActivity::class.java )
+        val intent = Intent(this, HomeActivity::class.java )
         startActivity(intent)
 
 
