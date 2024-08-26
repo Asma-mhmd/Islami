@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/head_sebha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/sebha"
+            app:layout_constraintStart_toStartOf="@id/sebha"
+            app:layout_constraintBottom_toTopOf="@id/sebha"
+            app:layout_constraintEnd_toEndOf="@id/sebha"
+            android:src="@drawable/headofsebha"
+            android:paddingStart="25dp"
+            android:paddingTop="28dp"
+            />
+
+        <ImageView
+            android:id="@+id/sebha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/seb7a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tasbehat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="عدد التسبيحات"
+            app:layout_constraintTop_toBottomOf="@id/sebha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/elmessiiri"
+            android:textSize="25sp"
+            android:textFontWeight="600"
+            />
+        <TextView
+            android:id="@+id/numbers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tasbehat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/tasbehatbg"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.2"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:textFontWeight="400"
+            android:textColor="#242424"
+            android:text="0"
+            />
+        <TextView
+            android:id="@+id/zekr"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/tasbehatbg2"
+            app:layout_constraintTop_toBottomOf="@id/numbers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintHeight_percent="0.07"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="سبحان الله"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
