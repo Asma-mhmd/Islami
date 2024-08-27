@@ -51,7 +51,7 @@ lateinit var binding : FragmentSebhaBinding
             if (zekrCounter==0){
                 zekr.text="سبحان الله"
             }else if (zekrCounter==1){
-                zekr.text="الحمد الله"
+                zekr.text="الحمد لله"
             }else if (zekrCounter==2){
                 zekr.text="الله اكبر"
 
